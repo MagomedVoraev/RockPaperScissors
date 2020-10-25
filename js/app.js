@@ -1,28 +1,29 @@
-//++++++ OUVERTURE FERMETURE RULES ++++++++++++
+/* ====================================================
+================= RULES OPEN / CLOSE ==================
+==================================================== */
 
 // button RULES
 var rulesElement = document.getElementById('rules');
 
-// selection du block des RULES à faire disparaitre//apparaitre
-var rulesBlock = document.querySelector('.rules__logo');
+// block des RULES
+var rulesContainer = document.getElementById('rulesContainer');
+
+function showRules() {
+    rulesContainer.classList.toggle('big-container--off');
+};
 
 // j'active class flex et je désactive ++ toggle ++
-rulesElement.addEventListener('click', function () {
-    rulesBlock.classList.toggle('rules__logo--flex');
-    document.querySelector('.first-page').style.backgroundColor = 'red';
-});
+rulesElement.addEventListener('click', showRules);
 
-// =====================================================
-
-// selection du img X de rules
+// img X de rules
 var rulesElementCloseX = document.getElementById('rulesCloseX');
-
 // fermeture de RULES block par X
 rulesElementCloseX.addEventListener('click', function () {
-    rulesBlock.className = 'rules__logo';
-
+    rulesContainer.classList.toggle('big-container--off');
 });
 
 
-// ===========************++++++++++**$$$$$$$$$*********
+/* ====================================================
+=================== PLAY STEP 1 =======================
+==================================================== */
 
