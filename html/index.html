@@ -57,22 +57,19 @@
     <div class="first-page__main">
 
         <div class="main__bloc1">
-            <section class="rackPaperScissors paper"><img
-                    src="../rock-paper-scissors-master/images/icon-paper.svg"
-                    alt="paper">
+            <section data-choice=paper
+                class="rackPaperScissors paper-margin paper play--active">
             </section>
 
 
-            <section class="rackPaperScissors scissors"><img
-                    src="../rock-paper-scissors-master/images/icon-scissors.svg"
-                    alt="scissors">
+            <section data-choice=scissors
+                class="rackPaperScissors scissors play--active">
             </section>
         </div>
 
         <div class="main__bloc2">
-            <section class="rackPaperScissors rock"><img
-                    src="../rock-paper-scissors-master/images/icon-rock.svg"
-                    alt="rock">
+            <section data-choice=rock
+                class="rackPaperScissors rock play--active">
             </section>
         </div>
 
@@ -82,17 +79,38 @@
         </div>
     </div>
 
-    <!-- =========================================== -->
-    <footer class="footer">
-        <h2 class="footer__rules" id="rules">rules</h2>
-    </footer>
 
 
 
-    <!-- ***************** FOR JS *************************** -->
+
+    <!--***************************************************** 
+    ********************** FOR JS *************************** 
+    ******************************************************-->
+    <div class="first-page--play">
+        <div class="step-1">
+            <div class="me-player">
+                <h3 class="player-description">you picked</h3>
+                <section
+                    class="rackPaperScissors__me--play play--active">
+                </section>
+            </div>
+
+            <div class="computer-player ">
+                <h3 class="player-description">the house picked</h3>
+                <section
+                    class="rackPaperScissors__computer--play play--active">
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************* MESSAGE WIN, LOSE, DRAW ************* -->
+    <div class="messageWLD">
+        <p class="messageWLD--win messageWLD--lose messageWLD--draw">
+            YOU LOSE</p>
+    </div>
 
     <!-- cette div sera display none tant que RULES inactive -->
-
     <div class="big-container--on big-container--off"
         id="rulesContainer">
         <div class="rules__logo">
@@ -108,6 +126,12 @@
     </div>
 
     <!-- ***************** FOR JS *************************** -->
+
+
+    <!-- =========================================== -->
+    <footer class="footer">
+        <h2 class="footer__rules" id="rules">rules</h2>
+    </footer>
     <!-- =========================================== -->
     <script src="../js/app.js"></script>
     <!-- =========================================== -->
